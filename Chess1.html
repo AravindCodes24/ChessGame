@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./Chess2.css">
+</head>
+<body onload="setup();">
+
+<h1 id="turnInfo"> Chess 
+<p id="turnInfo">Player's turn: <b>White</b></p></h1>
+<section id="board">
+    <div class="overlay" id="promotionMessage">
+        <div class="overlay-inner">
+            <span class="overlay-title">Promotion!</span>
+            <p class="overlay-text" id="alertText"></p>
+            <ul id="promotionList" class="white">
+                <li><a href="#" class="promotion-button queen" onclick="promote('queen',event);">queen</a></li>
+                <li><a href="#" class="promotion-button castle" onclick="promote('castle',event);">castle</a></li>
+                <li><a href="#" class="promotion-button bishop" onclick="promote('bishop',event);">bishop</a></li>
+                <li><a href="#" class="promotion-button knight" onclick="promote('knight',event);">knight</a></li>
+            </ul>
+        </div>
+    </div>
+	<div class="overlay" id="errorMessage">
+		<div class="overlay-inner">
+			<span class="overlay-title">Error!</span>
+			<p class="overlay-text" id="errorText"></p>
+			<a href="#" class="overlay-button" onclick="closeError();">Close</a>
+		</div>
+	</div>
+	<div class="overlay" id="endMessage">
+		<div class="overlay-inner">
+			<span class="overlay-title">Game Over!</span>
+			<p class="overlay-text" id="endText"></p>
+			<a href="#" class="overlay-button" onclick="newGame();">New Game</a>
+		</div>
+	</div>
+
+
+    <!-- <div id="gameContainer">
+        <div id="player1">
+          <h2>Player 1</h2>
+          <div id="time1">00:00</div>
+        </div>
+        
+        <div id="player2">
+          <h2>Player 2</h2>
+          <div id="time2">00:00</div>
+        </div>
+      
+        <button id="startBtn">Start Game</button>
+      </div> -->
+      
+</section>
+
+<script  src="./Chess3.js"></script>
+
+</body>
+</html>
